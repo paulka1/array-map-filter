@@ -23,7 +23,13 @@ Sortie attendue:
 
  */
 
-function keepStarks(names) {
+const keepStarks = names => {
+  let newTabeStark = names.filter(name => {
+    if( name == 'Bran Stark' || name == 'Arya Stark' || name == 'Sansa Stark'){
+      return name
+    }
+  })
+  return newTabeStark
 }
 
 // Ne pas modifier l'export

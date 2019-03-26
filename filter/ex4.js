@@ -28,7 +28,13 @@ Sortie attendue:
   ]
  */
 
-function filterOnPrice(products, maxPrice) {
+const filterOnPrice = (products, maxPrice) => {
+  let newTable = products.filter(product =>{
+    if( product.price < maxPrice){
+      return product.name
+    }
+  });
+  return newTable
 }
 
 // Ne pas modifier l'export

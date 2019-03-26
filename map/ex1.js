@@ -21,7 +21,11 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
+const getStringsLength = strings => {
+  let tableLength = strings.map(function(word) {
+    return word + ' contains ' + word.length + ' characters'
+  });
+return tableLength
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

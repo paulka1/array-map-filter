@@ -42,7 +42,17 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
+const getFoodCategories = foods => {
+  let isVegetarianTable = foods.map(function(food){
+    if ( food.isVegetarian == true ){
+      return food.food + ' is suitable for vegetarians';
+
+    } else {
+      return food.food + ' is not suitable for vegetarians'
+    }
+    
+  });
+  return isVegetarianTable;
 }
 
 
