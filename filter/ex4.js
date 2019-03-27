@@ -30,7 +30,7 @@ Sortie attendue:
 
 const filterOnPrice = (products, maxPrice) => {
   let newTable = products.filter(product =>{
-    if( product.price < maxPrice){
+    if( product.price <= maxPrice){
       return product.name
     }
   });

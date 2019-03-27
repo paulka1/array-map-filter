@@ -38,7 +38,15 @@ Exemple d'entrée:
 
  */
 
-function searchWordFilter(items, search) {
+const searchWordFilter = (items, search) => {
+  let newTable = items.filter(item => {
+    let itemsLower = item.toLowerCase();
+    search = search.toLowerCase();
+    if(itemsLower.includes(search)){
+      return item
+    }
+  })
+  return newTable
 }
 
 // Ne pas modifier l'export
